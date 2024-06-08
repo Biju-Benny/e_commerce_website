@@ -88,7 +88,7 @@ DATABASES = {
         'HOST':'CODEBEE\MSSQLSERVER07',
         'OPTIONS':{
             'driver':'ODBC Driver 17 for SQL Server',
-            'Trusted_connection':'yes',
+            
         },
 
     }
