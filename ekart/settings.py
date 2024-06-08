@@ -79,18 +79,25 @@ WSGI_APPLICATION = 'ekart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'ecom',
+#         'USER':'adsr',
+#         'PASSWORD':'Pass@1234',
+#         'HOST':'CODEBEE\MSSQLSERVER07',
+#         'OPTIONS':{
+#             'driver':'ODBC Driver 17 for SQL Server',
+            
+#         },
+
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'ecom',
-        'USER':'adsr',
-        'PASSWORD':'Pass@1234',
-        'HOST':'CODEBEE\MSSQLSERVER07',
-        'OPTIONS':{
-            'driver':'ODBC Driver 17 for SQL Server',
-            
-        },
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
