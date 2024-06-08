@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-d+sn*0d0u@6eby=@q5^2d(_in!(dz03b9hdsnz*4d!_3sxbf4c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = ['.vercel.app']
 ALLOWED_HOSTS = ['.vercel.app']
 
 
@@ -80,8 +81,16 @@ WSGI_APPLICATION = 'ekart.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'ecom',
+        'USER':'adsr',
+        'PASSWORD':'Pass@1234',
+        'HOST':'CODEBEE\MSSQLSERVER07',
+        'OPTIONS':{
+            'driver':'ODBC Driver 17 for SQL Server',
+            'Trusted_connection':'yes',
+        },
+
     }
 }
 
@@ -120,22 +129,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-# STATIC_URL = 'ecart_files/'
-# STATICFILES_DIRS= [
-#     BASE_DIR/ "static"
-# ]
-
-# MEDIA_URL = 'media/'
-# MEDIA_ROOT =  os.path.join(BASE_DIR,'media/')
-
-
-STATIC_URL = '/static/'
+STATIC_URL = 'ecart_files/'
 STATICFILES_DIRS= [
     BASE_DIR/ "static"
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-MEDIA_URLS ='/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT =  os.path.join(BASE_DIR,'media/')
+
+
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS= [
+#     BASE_DIR/ "static"
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# MEDIA_URLS ='/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
