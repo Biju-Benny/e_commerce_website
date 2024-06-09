@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-d+sn*0d0u@6eby=@q5^2d(_in!(dz03b9hdsnz*4d!_3sxbf4c
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.vercel.app']
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,20 +79,7 @@ WSGI_APPLICATION = 'ekart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'mssql',
-#         'NAME': 'ecom',
-#         'USER':'adsr',
-#         'PASSWORD':'Pass@1234',
-#         'HOST':'CODEBEE\MSSQLSERVER07',
-#         'OPTIONS':{
-#             'driver':'ODBC Driver 17 for SQL Server',
-            
-#         },
 
-#     }
-# }
 
 DATABASES = {
     'default': {
